@@ -31,7 +31,7 @@ def newton_raphson(f, x, ER, N):
     i=1         #Numero de Iteracion
     xi=0        #Aproximacion actual
     while ( (Ea>ER) & (N>i) ):
-        fd=derivada(f, 0.0000002)           #Se calcula la derivada de la funcion
+        fd=derivada(f)           #Se calcula la derivada de la funcion
         xi = x - ( f(x) / fd(x) )           #Se calcula el punto siguiente 
         Ea= abs( ( xi - x ) / xi)           #Se calcula el Error relativo Actual
         if(i>1):                            #Se evalua que se va a mostrar por pantalla
