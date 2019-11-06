@@ -35,7 +35,7 @@ def newton_raphson(f, x, ER, N):
     i = 1; err = 1; xi = None
     
     while i <= N and ER < err:
-        xi = x - (f(x)/derivada(f, x)(x))
+        xi = x - (f(x)/derivada(f)(x))
         err = er(x, err)
         print("Iteración:", i, "Aproximación:", xi, "Error:", err)
         i += 1
